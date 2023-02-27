@@ -197,4 +197,4 @@ def search():
 
 if __name__ == "__main__":
 	app.secret_key = "fadzniaidil"
-	app.run(debug=True, host="0.0.0.0", port=5789)
+	app.run(debug=True)
