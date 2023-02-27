@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+	<form action="/human" method="POST">
+		<table>
+			<tr>
+				<td>ID :</td>
+				<td>
+					<input type="text" name="id" value="{{sudo[0]}}" readonly required>
+				</td>
+			</tr>
+			<tr>
+				<td>Name :</td>
+				<td>
+					<input type="text" name="name" value="{{sudo[1]}}" required>
+				</td>
+			</tr>
+			<tr>
+				<td>Address :</td>
+				<td>
+					<input type="text" name="address" value="{{sudo[2]}}" required>
+				</td>
+			</tr>
+			<tr>
+				<td>Birth Date</td>
+				<td>
+					<input type="date" name="bday" value="{{sudo[3]}}" required>
+				</td>
+			</tr>
+			<tr>
+				<td>No.Phone :</td>
+				<td>
+					<input type="number" name="nophone" value="{{sudo[4]}}" required>
+				</td>
+			</tr>
+			<tr>
+				<td>Medical Record</td>
+				<td>
+					<input type="text" name="medrec" value="{{sudo[5]}}" required>
+				</td>
+			</tr>
+		</table>
+		<button action="/human">Submit</button>
+		<a href='/patient'>
+			<button type="button">Cancel</button>
+		</a>
+	</form>
+</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+	<div id="updateform">
+		<form action="/goUpdate" method="POST">
+			<table>
+				<tr>
+					<td>ID :</td>
+					<td>
+						<input type="text" name="D_ID" value="{{sudo[0]}}" readonly>
+					</td>
+				</tr>
+				<tr>
+					<td>Name :</td>
+					<td>
+						<input type="text" name="D_Name" value="{{sudo[1]}}" required>
+					</td>
+				</tr>
+				<tr>
+					<td>Form :</td>
+					<td>
+						<select name="D_Form">
+							{% for i in option %}
+							<option value="{{sudo[2]}}">{{i}}</option>
+							{% endfor %}
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Dose</td>
+					<td>
+						<input type="number" name="D_Dose" value="{{sudo[3]}}" required>
+					</td>
+				</tr>
+				<tr>
+					<td>Expired</td>
+					<td>
+						<input type="date" name="D_Expired" value="{{sudo[4]}}" required>
+					</td>
+				</tr>
+			</table>
+			<button action="/goUpdate">Submit</button>
+			<a href='/product'>
+				<button type="button">Cancel</button>
+			</a>
+		</form>
+	</div>
+</div>
+{% endblock %}

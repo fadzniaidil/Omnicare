@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="static/css/prescript.css">
+<script type="text/javascript" src="static/js/change.js"></script>
+<div class="kh">
+	<div id="data" class="tableset">
+		<h3>Prescription <span class="sp">Infomation</span></h3>
+		<table class="tab1">
+			<tr>
+				<th>ID</th>
+				<th>Patient Name</th>
+				<th>No Phone</th>
+				<th>Prescription</th>
+			</tr>
+			{% for i in pat_data %}
+			<tr>
+				<td>{{i[0]}}</td>
+				<td>{{i[1]}}</td>
+				<td>{{i[4]}}</td>
+				<td>
+					<a href='/info/{{i[0]}}'>
+						<button class='moreinfo' type="button">More Info</button>
+					</a>
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+			<div>
+		<button class="button" onclick="invdata()">Create</button>
+	</div>
+	</div>
+	<div id="add">
+		<form action="/preInsert" method="POST">
+			<label><strong>Prescription Data</strong></label>
+			<table class="tab1">
+				<tr>
+					<td>Patient</td>
+					<td>
+						<select class="" name="a" required>
+							{% for j in list_pat %}
+							<option value="{{j[0]}}">{{j[1]}}</option>
+							{% endfor %}
+						</select>
+					</td>
+				</tr>
+				<br>
+				<tr>
+					<td>Medicine :</td>
+					<td>
+						<select class="" name="b" required>
+							<optgroup label="Tablet">
+								{% for i in data_tablet %}
+								<option value="{{i[0]}}">{{i[1]}}</option>
+								{% endfor %}
+							</optgroup>
+							<optgroup label="Cream">
+								{% for i in data_cream %}
+								<option value="{{i[0]}}">{{i[1]}}</option>
+								{% endfor %}
+							</optgroup>
+							<optgroup label="Capsule">
+								{% for i in data_capsule %}
+								<option value="{{i[0]}}">{{i[1]}}</option>
+								{% endfor %}
+							</optgroup>
+							<optgroup label="Syrup">
+								{% for i in data_syrup %}
+								<option value="{{i[0]}}">{{i[1]}}</option>
+								{% endfor %}
+							</optgroup>
+							<optgroup label="Powder">
+								{% for i in data_powder %}
+								<option value="{{i[0]}}">{{i[1]}}</option>
+								{% endfor %}
+							</optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Quantity : </td>
+					<td><input type="number" name="c" size="50" required></td>
+				</tr>
+				<tr>
+					<td>Price : </td>
+					<td><input type="number" id="d" name="d" size="50" required></td>
+					<td><input type="hidden" name="e"></td>
+				</tr>
+			</table>
+			<button class="edit" action="/preInsert" >Add</button>
+			<button class="update" onclick="invadd()">Cancel</button>
+		</form>
+	</div>
+
+</div>
+{% endblock %}

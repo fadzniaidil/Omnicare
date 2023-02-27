@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="ko"><br>
+	<div>
+	<h2>Add Patient Info</h2>
+	<img src="static/images/patient.png">
+	</div>
+	<form class="form" action="/patAdd" method="POST">
+		<table class="tableset">
+			<tr>
+				<td>Name :</td>
+				<td>
+					<input type="text" name="name" size="50" required>
+				</td>
+			</tr>
+			<tr>
+				<td>Address :</td>
+				<td>
+					<input type="text" name="address" size="50" required>
+				</td>
+			</tr>
+			<tr>
+				<td>Birth Date :</td>
+				<td>
+					<input type="date" name="bday" size="50" required>
+				</td>
+			</tr>
+			<tr>
+				<td>No.Phone :</td>
+				<td>
+					<input type="text" name="nophone" size="50" required>
+				</td>
+			</tr>
+			<tr>
+				<td>Medical Record :</td>
+				<td>
+					<input type="text" name="medrec" size="50" required>
+				</td>
+			</tr>
+			<tr>
+				<td><button class="edit"  action="/patAdd">Submit</button></td>
+				<td><a href='/patient'>
+						<button class="update" type="button">Cancel</button>
+					</a>
+				</td>
+			</tr>
+		</table>
+		
+		
+	</form>
+</div>
+{% endblock %}

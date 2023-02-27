@@ -1,0 +1,47 @@
+.button{
+	position: relative;
+	background: #F4F4F4;
+	color: #292743;
+	width: 11rem;
+	margin-bottom: 2rem;
+	border: none;
+	outline: none;
+	font-size: 15px;
+	cursor:pointer;
+	padding: 10px;
+	color: #1F8B8B;
+
+}
+
+
+.tab1 th,
+.tab1 td {
+    padding: 12px 15px;
+}
+
+.tab1 tbody tr {
+    border-bottom: 2px solid #dddddd;
+}
+
+.tab1 tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.tab1 tbody tr:last-of-type {
+    border-bottom: 4px solid #009879;
+}
+
+.tab1 tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.tableset{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-height: auto;
+	max-width: auto;
+	margin-right: 100px;
+	margin-left: 100px;
+}

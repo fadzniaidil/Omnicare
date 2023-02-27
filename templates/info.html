@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- 
+	patient detail
+	patient name
+	patient Datebirth
+	patient phone
+	Patient address
+	medred
+	drug
+	form dose  Quantity expired
+	payment
+
+ -->
+<script type="text/javascript" src="static/js/change.js"></script>
+<div>
+	<div>
+		<div>
+			<div>
+				<label>Prescription Detail</label>
+				<table>
+					<tr>
+						<td>Name :</td>
+						<td>{{a[0]}}</td>
+					</tr>
+					<tr>
+						<td>Birth Date :</td>
+						<td>{{a[1]}}</td>
+					</tr>
+					<tr>
+						<td>No Phone :</td>
+						<td>{{a[2]}}</td>
+					</tr>
+					<tr>
+						<td>Address :</td>
+						<td>{{a[3]}}</td>
+					</tr>
+					<tr>
+						<td>Medical Record :</td>
+						<td>{{a[4]}}</td>
+					</tr>
+				</table>
+			</div>
+			<div>
+				<label>Medicine :</label>
+				<table>
+					<tr>
+						<td>Name</td>
+						<td>Form</td>
+						<td>Dose</td>
+						<td>Expired Date</td>
+						<td>Quantity</td>
+						<td>Price</td>
+					</tr>
+					{% for i in b %}
+					<tr onkeyup="passval()">
+						<td>{{i[0]}}</td>
+						<td>{{i[1]}}</td>
+						<td>{{i[2]}}mg</td>
+						<td>{{i[3]}}</td>
+						<td>{{i[4]}}</td>
+						<td>RM {{'%0.2f'| format(i[5]|float)}}</td>
+					</tr>
+					{% endfor %}
+				</table>
+			</div>
+		</div>
+		<br>
+		<div>
+			<label>Total Payment : RM {{'%0.2f'| format(c[0]|float)}}</label>
+		</div>
+	</div>
+</div>
+{% endblock %}

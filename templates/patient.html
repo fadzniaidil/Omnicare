@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="kh">
+	<div class='tableset' style="display: block;">
+		<h3>Patient <span class="sp"> Infomation</span></h3>
+		<table class="tab1">
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Address</th>
+				<th>Birth Date</th>
+				<th>Phone Number</th>
+				<th>Medical Record</th>
+				<th>Update Info</th>
+			</tr>
+			{% for i in list_data %}
+			<tr>
+				<td>{{i[0]}}</td>
+				<td>{{i[1]}}</td>
+				<td>{{i[2]}}</td>
+				<td>{{i[3]}}</td>
+				<td>{{i[4]}}</td>
+				<td>{{i[5]}}</td>
+				<td>
+					<a href='/nano_patient/{{i[0]}}'>
+						<button class="edit" type="button">Edit</button>
+					</a>
+					<a href='/purge_patient/{{i[0]}}'>
+						<button class="update" type="button">Delete</button>
+					</a>
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+		<div>
+		<a href='/patient_add'>
+			<button class="button" type="button">Add Patient</button>
+		</a>
+	</div>
+	</div>
+</div>
+{% endblock %}

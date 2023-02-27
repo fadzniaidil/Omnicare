@@ -1,0 +1,47 @@
+*{
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.header{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 5px 5%;
+}
+
+.header li, a{
+	color:#1F8B8B;
+	text-decoration:none;
+	font-size:16px;
+	font-weight:500;
+}
+.header button{
+	color:white;
+}
+
+.logo{
+	cursor: pointer;
+	max-width:10%;
+    height:auto;
+    margin-right: auto;
+}
+
+.navlink{
+	list-style: none;
+	text-decoration:none;
+	font-size:16px;
+}
+
+.navlink li{
+	display: inline-block;
+	padding: 0px 20px;
+}
+
+.navlink li a{
+	transition: all 0.3s ease 0s;
+}
+
+.navlink li a:hover{
+	color: #0088a9;
+}
+
