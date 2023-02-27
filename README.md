@@ -12,13 +12,13 @@
 - [Live](<https://omnicare.onrender.com/> "Live View")
 
 ## Screenshot
-![ADMIN1](https://github.com/fadzniaidil/image/blob/main/Omnicare/file1.png)
-![ADMIN1](https://github.com/fadzniaidil/image/blob/main/Omnicare/file2.png)
-![ADMIN1](https://github.com/fadzniaidil/image/blob/main/Omnicare/file3.png)
-![ADMIN1](https://github.com/fadzniaidil/image/blob/main/Omnicare/file4.png)
-![ADMIN1](https://github.com/fadzniaidil/image/blob/main/Omnicare/file5.png)
-![ADMIN1](https://github.com/fadzniaidil/image/blob/main/Omnicare/file6.png)
-![ADMIN1](https://github.com/fadzniaidil/image/blob/main/Omnicare/file7.png)
+![ADMIN1](https://github.com/fadzniaidil/image/blob/main/omnicare/file1.png)
+![ADMIN1](https://github.com/fadzniaidil/image/blob/main/omnicare/file2.png)
+![ADMIN1](https://github.com/fadzniaidil/image/blob/main/omnicare/file3.png)
+![ADMIN1](https://github.com/fadzniaidil/image/blob/main/omnicare/file4.png)
+![ADMIN1](https://github.com/fadzniaidil/image/blob/main/omnicare/file5.png)
+![ADMIN1](https://github.com/fadzniaidil/image/blob/main/omnicare/file6.png)
+![ADMIN1](https://github.com/fadzniaidil/image/blob/main/omnicare/file7.png)
 
 
 
