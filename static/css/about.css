@@ -1,5 +1,5 @@
 .about-section{
-    background: url({% static 'image/abot.jpeg'%}) no-repeat left;
+    background: url({% static '../image/abot.jpeg'%}) no-repeat left;
     background-size: 55%;
     background-color: #fdfdfd;
     overflow: hidden;
@@ -61,7 +61,7 @@
 }
 
 .hb{
-    background-image: url({% static 'image/abot.jpeg'%});
+    background-image: url({% static '../image/abot.jpeg'%});
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
